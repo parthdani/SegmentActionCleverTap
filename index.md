@@ -25,20 +25,23 @@ The Destination Action framework lets you see and control how Segment sends the 
 
 After setting up the destination (action), Segment monitors the data that matches the conditions you create (called "triggers") for the subscription. When the conditions are met, explicit mapping transforms the incoming data to an output format that your destination can use.
 
-# Advantages of CleverTap (Action)
-The following are the advantages of setting up Segment Destination:
+# Advantages of CleverTap (Actions) Destination
+The following are the advantages of setting up CleverTap (Actions) Destination:
 * Upload User Profile
 * Delete User Profile
 
-# Set up CleverTap (Action)
-To set up Segment Destination (Action):
+# Set up CleverTap (Actions) Destination
+To set up CleverTap (Actions) Destination:
 
 1. From the Segment web app, click **Catalog** and then click **Destinations**.
 2. Select *Destinations Actions* under Categories from the left navigation.
-   <img width="1424" alt="Navigation" src="https://user-images.githubusercontent.com/116852355/198419599-bd9322bc-4410-4a30-b7bd-5309c01a7ff3.png">
+
+   <kbd> <img width="600" alt="Navigation" src="https://user-images.githubusercontent.com/116852355/198419599-bd9322bc-4410-4a30-b7bd-5309c01a7ff3.png" style="border: 1px solid black"> </kbd>
 3. Click *CleverTap (Actions)*.
 4. Click **Configure Actions CleverTap**.
-   <img width="1209" alt="Click Configure CleverTap Action" src="https://user-images.githubusercontent.com/116852355/198419703-7506ab5b-7c61-4e5a-abd7-220d8b416082.png">
+
+   <kbd> <img width="600" alt="Click Configure CleverTap Action" src="https://user-images.githubusercontent.com/116852355/198419703-7506ab5b-7c61-4e5a-abd7-220d8b416082.png"> </kbd>
+
 5. Select an existing *Source* to connect to CleverTap (Actions).
 6. Enter the following project details to authorize the connection: 
    * Project ID
@@ -48,7 +51,7 @@ To set up Segment Destination (Action):
     These details are obtained by navigating to the *Settings* > *Project* page of the CleverTap dashboard.
     To identify the region of your account, check the URL of your CleverTap account.
   
-    <img width="830" alt="CT_Project_Details" src="https://user-images.githubusercontent.com/116852355/198419815-d2565bbe-6a5e-4b31-8b2a-364872ba01a9.png">
+    <kbd> <img width="600" alt="CT_Project_Details" src="https://user-images.githubusercontent.com/116852355/198419815-d2565bbe-6a5e-4b31-8b2a-364872ba01a9.png"> </kbd>
   
     Refer to the following table to identify the region for your account:
   
