@@ -1,6 +1,6 @@
 ---
 # The end name should be similar to `Slack  Destination`
-title: <destination_name>
+title: CleverTap (Actions)
 hide-boilerplate: true
 hide-dossier: true
 ---
@@ -25,12 +25,12 @@ The Destination Action framework lets you see and control how Segment sends the 
 
 After setting up the destination (action), Segment monitors the data that matches the conditions you create (called "triggers") for the subscription. When the conditions are met, explicit mapping transforms the incoming data to an output format that your destination can use.
 
-# Advantages of Segment Destination (Action)
+# Advantages of CleverTap (Action)
 The following are the advantages of setting up Segment Destination:
 * Upload User Profile
 * Delete User Profile
 
-# Set up Segment Destination (Action)
+# Set up CleverTap (Action)
 To set up Segment Destination (Action):
 
 1. From the Segment web app, click **Catalog** and then click **Destinations**.
