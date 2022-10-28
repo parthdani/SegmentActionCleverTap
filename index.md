@@ -17,28 +17,79 @@ hide-dossier: true
 
 <!-- In the section below, explain the value of this actions-based destination. If you don't have a classic version of the destination, remove this section. -->
 
-## Benefits of <destination_name> (Actions)
+# Overview
 
-<destination_name> (Actions) provides the following benefits:
+The Destination Action framework lets you see and control how Segment sends the event data it receives from your sources to action-based destinations. In other words, it helps to create the following:
+* Subscriptions, set of conditions that act as triggers to send data to the destination 
+* Data mappings to format that data for the destination platform
 
-- **Main point 1**. One or two sentences that back up the main point.
-- **Main point 2**. One or two sentences that back up the main point.
+After setting up the destination (action), Segment monitors the data that matches the conditions you create (called "triggers") for the subscription. When the conditions are met, explicit mapping transforms the incoming data to an output format that your destination can use.
 
-<!-- The section below explains how to enable and configure the destination. Include any configuration steps not captured below. For example, obtaining an API key from your platform and any configuration steps required to connect to the destination. -->
+# Advantages of Segment Destination (Action)
+The following are the advantages of setting up Segment Destination:
+* Upload User Profile
+* Delete User Profile
 
-## Getting started
+# Set up Segment Destination (Action)
+To set up Segment Destination (Action):
 
-1. From the Segment web app, click **Catalog**, then click **Destinations**.
-2. Find the Destinations Actions item in the left navigation, and click it.
-3. Click **Configure <desintation_name>**.
-4. Select an existing Source to connect to <destination_name> (Actions).
+1. From the Segment web app, click **Catalog** and then click **Destinations**.
+2. Select *Destinations Actions* under Categories from the left navigation.
+   <img width="1424" alt="Navigation" src="https://user-images.githubusercontent.com/116852355/198419599-bd9322bc-4410-4a30-b7bd-5309c01a7ff3.png">
+3. Click *CleverTap (Actions)*.
+4. Click **Configure Actions CleverTap**.
+   <img width="1209" alt="Click Configure CleverTap Action" src="https://user-images.githubusercontent.com/116852355/198419703-7506ab5b-7c61-4e5a-abd7-220d8b416082.png">
+5. Select an existing *Source* to connect to CleverTap (Actions).
+6. Enter the following project details to authorize the connection: 
+   * Project ID
+   * Passcode
+   * Region
+  
+    These details are obtained by navigating to the *Settings* > *Project* page of the CleverTap dashboard.
+    To identify the region of your account, check the URL of your CleverTap account.
+  
+    <img width="830" alt="CT_Project_Details" src="https://user-images.githubusercontent.com/116852355/198419815-d2565bbe-6a5e-4b31-8b2a-364872ba01a9.png">
+  
+    Refer to the following table to identify the region for your account:
+  
+   | CleverTap Dashboard URL | Region |
+   | --- | --- |
+   | [https://eu1.dashboard.clevertap.com/login.html#/](https://eu1.dashboard.clevertap.com/login.html#/) | EU |
+   | [https://in1.dashboard.clevertap.com/login.html#/](https://in1.dashboard.clevertap.com/login.html#/) | IN |
+   | [https://us1.dashboard.clevertap.com/login.html#/](https://us1.dashboard.clevertap.com/login.html#/) | US |
+   | [https://sg1.dashboard.clevertap.com/login.html#/](https://sg1.dashboard.clevertap.com/login.html#/) | Singapore |
+   
+7. Select *Quick Setup* to start with pre-populated subscriptions, or *Customized Setup* to configure each action from scratch. 
+8. Click **Configure Actions**.
 
-<!-- The line below renders a table of connection settings (if applicable), Pre-built Mappings, and available actions. -->
+# Available Presets
+CleverTap (Actions) has the following presets:
 
-{% include components/actions-fields.html %}
+| Preset Name | Trigger |  Default Action |
+| --- | --- | --- |
+| User Upload | Event type = "identify" | Uploads User Profile to CleverTap dashboard |
+| User Delete | Event event = "delete user" | Deletes user profile |
 
-<!--
-Additional Context
+# Available Actions
+Combine supported triggers with the following CleverTap-supported actions:
 
-Include additional information that you think will be useful to the user here. For information that is specific to an individual mapping, please add that as a comment so that the Segment docs team can include it in the auto-generated content for that mapping.
--->
+## User Upload
+Create a profile on the CleverTap dashboard or update it if it exists.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Identity | String | <ul><li>This field is mandatory.</li><li>It is used to recognize a unique user.</li><li>It can be the user’s email, a phone number, or any other identifier that you are using to tag your users.</li></ul> |
+| Created At | ts | <ul><li>This field is optional.</li><li>It denotes the date and time when the user profile was created.</li><li>Defaults to the current timestamp, if omitted.</li><li>For more information about converting this timestamp to Unix timestamps, refer to [Conversion Timestamps](#conversion-timestamps).</li></ul> |
+| Person Attributes | object | <ul><li>This field is mandatory.</li><li>It consists of user profile properties.</li><li>It is passed as key/value pairs.</li><li>properties[“Phone”] must be formatted as +[country code][phone number].</li></ul> |
+
+## Delete User
+Deletes the user profile on the CleverTap dashboard.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| Identity | String | <ul><li>This field is mandatory.</li><li>It is used to recognize a unique user.</li><li>It can be the user’s email, a phone number, or any other identifier that you are using to tag your users.</li></ul> |
+
+# Conversion Timestamps
+When mapping actions, you will see a *Convert Timestamps* setting. When enabled, it converts attributes containing ISO-8601 timestamps to Unix timestamps.
+
+For example, if you send an event with a timestamp of 2006-01-02T18:04:07Z. It is converted to 1136253847. If the timestamp is not in ISO-8601 format, it is not converted. This avoids converting attributes such as phone numbers or IDs.
