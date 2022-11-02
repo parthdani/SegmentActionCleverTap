@@ -40,8 +40,8 @@ To set up CleverTap (Actions) Destination:
 3. Click *CleverTap (Actions)*.
 4. Click **Configure Actions CleverTap**.
 
-   <kbd> <img width="600" alt="Click Configure CleverTap Action" src="https://user-images.githubusercontent.com/116852355/198419703-7506ab5b-7c61-4e5a-abd7-220d8b416082.png"> </kbd>
-
+   <kbd><img width="600" alt="Click Configure CleverTap Action" src="https://user-images.githubusercontent.com/116852355/199408316-3ba4d30b-255c-4899-ba73-ba8878ec0606.png"></kbd>
+   
 5. Select an existing *Source* to connect to CleverTap (Actions).
 6. Enter the following project details to authorize the connection: 
    * Project ID
