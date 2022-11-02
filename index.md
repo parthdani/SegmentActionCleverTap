@@ -19,11 +19,7 @@ hide-dossier: true
 
 # Overview
 
-The Destination Action framework lets you see and control how Segment sends the event data it receives from your sources to action-based destinations. In other words, it helps to create the following:
-* Subscriptions, set of conditions that act as triggers to send data to the destination 
-* Data mappings to format that data for the destination platform
-
-After setting up the destination (action), Segment monitors the data that matches the conditions you create (called "triggers") for the subscription. When the conditions are met, explicit mapping transforms the incoming data to an output format that your destination can use.
+[CleverTap](https://www.clevertap.com) is the World’s No.1 retention cloud that empowers digital consumer brands to increase customer retention and lifetime value. CleverTap drives contextual individualization with the help of a unified and deep data layer, AI/ML-powered insights, and automation enabling brands to offer hyper-personalized and delightful experiences to their customers.
 
 # Advantages of CleverTap (Actions) Destination
 The following are the advantages of setting up CleverTap (Actions) Destination:
