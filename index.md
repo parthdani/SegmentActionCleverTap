@@ -38,7 +38,7 @@ To set up CleverTap (Actions) Destination:
 
    <kbd> <img width="600" alt="Navigation" src="https://user-images.githubusercontent.com/116852355/198419599-bd9322bc-4410-4a30-b7bd-5309c01a7ff3.png" style="border: 1px solid black"> </kbd>
 3. Click *CleverTap (Actions)*.
-4. Click **Configure Actions CleverTap**.
+4. Click **Configure CleverTap (Actions)**.
 
    <kbd><img width="600" alt="Click Configure CleverTap Action" src="https://user-images.githubusercontent.com/116852355/199408316-3ba4d30b-255c-4899-ba73-ba8878ec0606.png"></kbd>
    
